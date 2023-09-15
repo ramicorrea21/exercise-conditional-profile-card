@@ -22,6 +22,8 @@ import "../style/index.css";
         city: null
     }
  */
+//Linkedin utliza una url mas compleja junto con el codigo del perfil por lo que para direccionarte a tu linkedin tendras que escribir tu codigo de perfil en el formulario, por ejemplo ramiro-correa-b2953324a por mas de que mi username no sea ese
+
 function render(variables = {}) {
   console.log("These are the current variables: ", variables); //print on the console
   // here we ask the logical questions to make decisions on how to build the html
@@ -41,16 +43,18 @@ function render(variables = {}) {
   }</h3>
           <ul class=${variables.socialMediaPosition}>
             <li><a href="https://twitter.com/${
-              variables.twitter
+              variables.twitter == null ? "4geeksacademy" : variables.twitter
             }"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${
-              variables.github
+              variables.github == null ? "4geeksacademy" : variables.github
             }"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/${
-              variables.linkedin
+            <li><a href="https://linkedin.com/in/${
+              variables.linkedin == null ? "4geeksacademy" : variables.linkedin
             }"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${
-              variables.instagram
+              variables.instagram == null
+                ? "4geeksacademy"
+                : variables.instagram
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
